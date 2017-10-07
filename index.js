@@ -92,7 +92,8 @@ function getAllTodoList(){
                         checked = "checked"
                     }
 
-                    $("#todo-list").append("<li class= '"+ className+"' ><input type='checkbox'" + 
+                    $("#todo-list").append("<li class= '"+ className+"' >"+         
+                        "<input type='checkbox'" + 
                          " name='todo-item-done'" + 
                          " class='todo-item-done'"+ 
                          " value='" + data[i].id + "' "+checked+" /> " + 
