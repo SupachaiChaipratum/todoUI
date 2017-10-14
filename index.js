@@ -1,3 +1,4 @@
+
 var url ="http://localhost:8080";
 $( document ).ready(function() {
      $("#add-todo-item").on('click', function(e){
@@ -114,7 +115,12 @@ function getAllTodoList(){
                         checked = "checked"
                     }
 
-                    $("#todo-list").append("<li class= '"+ className+"' >"+         
+                    $("#todo-list").append("<li class= '"+ className+"' >"+       
+
+                    
+                    // แยก หน้าจอออกเป็นสองชุด
+
+                    // ชุดแรก คืออันเดิม  แต่ย้าย onclick มาไว้ใน html เลย
                         "<span id='task-show-"+data[i].id+"'>"+ 
                         " <input type='checkbox'" + 
                         " name='todo-item-done'" + 
@@ -126,7 +132,8 @@ function getAllTodoList(){
                           " <button class='todo-item-delete' onclick='deleteTodoItem(event,"+data[i].id+",this)'>"+
                          "Delete</button>"+
                         "</span>"+   
-
+                        
+                        // ชุดสอง เป็น input text เริ่มต้นให้ disable ไว้
                         "<span id='task-edit-"+data[i].id+"' style='display:none'>"+ 
                         " <input type='text'  id='input-task-"+data[i].id+"'" + 
                         " name='todo-item-edit'" + 
